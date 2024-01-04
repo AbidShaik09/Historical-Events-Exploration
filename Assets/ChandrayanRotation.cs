@@ -12,11 +12,13 @@ public class ChandrayanRotation : MonoBehaviour
         Chandrayan = GetComponent<Rigidbody>();
         
         Chandrayan.AddTorque(rot);
+
+        Chandrayan.angularVelocity = rot;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Chandrayan.angularVelocity = rot;
+
     }
 }
