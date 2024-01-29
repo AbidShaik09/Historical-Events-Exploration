@@ -11,15 +11,18 @@ public class ChandrayanRotation : MonoBehaviour
     public Vector3 rot = new Vector3(0.0f, 5f, 0.0f);
     public float forceupvalue = 0.1f;
     public Vector3 clockrot = new Vector3(0.0f, 0.1f, 0.0f);
+    public  AudioSource rocketSound;
     public ParticleSystem[] particleSystems;
     void Start()
     {
+        
         LostCanvas.enabled = false;
         WinCanvas.enabled = false;
         Chandrayan = GetComponent<Rigidbody>();
         particleSystems=Chandrayan.GetComponentsInChildren<ParticleSystem>();
         Chandrayan.AddTorque(rot);
-        
+        rocketSound = GetComponent<AudioSource>();
+        rocketSound.Play();
         Chandrayan.angularVelocity = rot;
         Chandrayan.AddForce(0, -3f, 0);
     }
@@ -66,6 +69,9 @@ public class ChandrayanRotation : MonoBehaviour
         if (collision.gameObject.CompareTag("Moon"))
         {
             // Get the relative velocity of the collision
+
+            rocketSound.Stop();
+            
 
             float yVelocity = Math.Abs(Chandrayan.velocity.y * 5000);
             float AVelocity = Math.Abs(Chandrayan.angularVelocity.y * 1000);
