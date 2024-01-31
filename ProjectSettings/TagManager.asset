@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Moon
+  - FrontButtonCube
+  - BackButtonCube
+  - LeftButtonCube
+  - RightButtonCube
   layers:
   - Default
   - TransparentFX

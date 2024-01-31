@@ -23,15 +23,15 @@ public class MessageScript1 : MonoBehaviour
     void Update()
     {
 
-        if (Math.Abs((int)(Chandrayaan.velocity.y * 5000))>=100)
+        if (Math.Abs((int)(Chandrayaan.velocity.y * 5000))>200)
         {
             velocity = "Velocity Too High!";
             MessageTMPt.color = Color.red;
         }
-        else if (Math.Abs((int)(Chandrayaan.velocity.y * 5000)) >= 50)
+        else if (Math.Abs((int)(Chandrayaan.velocity.y * 5000)) >= 100)
         {
             velocity = "Velocity High!";
-            MessageTMPt.color = Color.HSVToRGB(0.6f, 0, 0);
+            MessageTMPt.color = Color.HSVToRGB(1f, 2f, 0);
         }
         else
         {

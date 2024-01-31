@@ -26,7 +26,7 @@ public class MessageScript : MonoBehaviour
             rotation = "Rotating Too Fast!";
             MessageTMP.color = Color.red;
         }
-        else if (Math.Abs((int)(Chandrayaan.angularVelocity.y * 1000)) > 200)
+        else if (Math.Abs((int)(Chandrayaan.angularVelocity.y * 1000)) > 150)
         {
             rotation = "Rotating Fast!";
             MessageTMP.color = Color.HSVToRGB(0.6f, 0, 0);
