@@ -134,6 +134,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Camera/BackgroundRenderOrder/BackgroundRenderOrder.unity
     guid: dd6d3723894ae4618b821f1e99d0a4c7
+  - enabled: 1
+    path: Assets/Scenes/Register/Register.unity
+    guid: 774c8b9302a224247a2d5eec3cc4167e
+  - enabled: 1
+    path: Assets/Scenes/Profile/Profile.unity
+    guid: 8512fabc4241bc449b454b22d26890a2
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: c52d3bb36b4c86f47af54ab9c7a02589,
       type: 2}

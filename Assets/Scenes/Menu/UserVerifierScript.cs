@@ -1,9 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
-using UnityEngine.Profiling.Memory.Experimental;
 using UnityEngine.SceneManagement;
 
 using static LoginScript;

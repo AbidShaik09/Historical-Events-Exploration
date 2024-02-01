@@ -31,8 +31,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
         [SerializeField]
         TextMeshProUGUI m_TitleLabel;
 
-        [SerializeField]
-        GameObject m_BackButton;
+       
 
         void Awake()
         {
@@ -74,7 +73,6 @@ namespace UnityEngine.XR.ARFoundation.Samples
             s_SelectedMenu.SetActive(false);
             s_SelectedMenu = menu;
             s_SelectedMenu.SetActive(true);
-            m_BackButton.SetActive(s_SelectedMenu.gameObject != gameObject);
 
             s_SelectedMenuInfo.gameObjectName = menu.name;
 
@@ -94,6 +92,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
         public void LoadScene(string sceneName)
         {
+            Debug.Log(sceneName + " pressed");
             SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
         }
 

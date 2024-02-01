@@ -29,14 +29,14 @@ public class ButtonScript : MonoBehaviour
     public void Chandrayan3()
     {
 
-        SceneManager.LoadScene("Interaction");
+        SceneManager.LoadScene(2, LoadSceneMode.Single);
 
 
     }
     public void IndependanceDay()
     {
 
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
 
 
     }
