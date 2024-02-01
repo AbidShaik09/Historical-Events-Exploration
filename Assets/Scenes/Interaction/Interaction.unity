@@ -3489,6 +3489,11 @@ PrefabInstance:
       objectReference: {fileID: 60350377}
     - target: {fileID: 3893693006469557116, guid: 1e5d193a51e640142a94deea4f35ddb8,
         type: 3}
+      propertyPath: clockrot.y
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893693006469557116, guid: 1e5d193a51e640142a94deea4f35ddb8,
+        type: 3}
       propertyPath: rocketSound
       value: 
       objectReference: {fileID: 315925117}
