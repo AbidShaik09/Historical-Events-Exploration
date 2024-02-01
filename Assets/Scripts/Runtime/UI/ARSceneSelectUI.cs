@@ -27,11 +27,6 @@ namespace UnityEngine.XR.ARFoundation.Samples
         /// </summary>
         static MenuInfo s_SelectedMenuInfo;
 
-        [SerializeField]
-        Scrollbar m_HorizontalScrollBar;
-
-        [SerializeField]
-        Scrollbar m_VerticalScrollBar;
 
         [SerializeField]
         TextMeshProUGUI m_TitleLabel;
@@ -83,7 +78,6 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
             s_SelectedMenuInfo.gameObjectName = menu.name;
 
-            ScrollToStartPosition();
         }
 
         public void ResetTitleLabel()
@@ -117,11 +111,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
             text.color = s_DisabledButtonColor;
         }
 
-        void ScrollToStartPosition()
-        {
-            m_HorizontalScrollBar.value = 0;
-            m_VerticalScrollBar.value = 1;
-        }
+ 
 
         class MenuInfo
         {
