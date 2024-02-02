@@ -38,12 +38,12 @@ public class UserVerifierScript : MonoBehaviour
 
     public async void GetData(string token)
     {
-        StartCoroutine(GetDataFromAPI(token));
+        StartCoroutine(GetDataFromAPIs(token));
 
     }
 
 
-    IEnumerator GetDataFromAPI(string token)
+    IEnumerator GetDataFromAPIs(string token)
     {
         string newrl = "http://arheewebapi.somee.com/Auth/Details";
         UnityWebRequest uwr = UnityWebRequest.Get(newrl + "?accessToken=" + UnityWebRequest.EscapeURL(token));
@@ -51,6 +51,11 @@ public class UserVerifierScript : MonoBehaviour
         if (uwr.result != UnityWebRequest.Result.Success)
         {
             output.text = "Session Expired,\n Login Again ";
+            PlayerPrefs.SetString("accessToken", "");
+            PlayerPrefs.SetString("email", "");
+            PlayerPrefs.SetString("age", "");
+            PlayerPrefs.SetString("gender", "");
+            PlayerPrefs.Save();
             SceneManager.LoadScene("Login");
 
         }

@@ -13,6 +13,7 @@ public class LoginScript : MonoBehaviour
     public TMP_InputField usernameField;
     public static string accessToken;
     public TMP_InputField passwordField;
+    public GameObject Form;
     public string url = "http://arheewebapi.somee.com/Auth/login";
     public TextMeshProUGUI output;
     void Start()
@@ -22,7 +23,6 @@ public class LoginScript : MonoBehaviour
         {
 
             output.text = "Loading...";
-            GameObject Form = GameObject.Find("FormHolder");
             Form.active = false;
             GetData(PlayerPrefs.GetString("accessToken"));
             Debug.Log("Login Successful");
@@ -30,7 +30,6 @@ public class LoginScript : MonoBehaviour
         else
         {
             output.text = "";
-            GameObject Form = GameObject.Find("FormHolder");
             Form.active = true;
             output = GameObject.Find("outputText").GetComponent<TextMeshProUGUI>();
             GameObject.Find("LoginButton").GetComponent<Button>().onClick.AddListener(GetData);
@@ -61,8 +60,8 @@ public class LoginScript : MonoBehaviour
         if (uwr.result != UnityWebRequest.Result.Success)
         {
             output.text = "Failed" + uwr.downloadHandler.text;
-            output.text = "Try Logging in again";
-            GameObject Form = GameObject.Find("FormHolder");
+
+            
             Form.active = true;
 
         }
@@ -120,6 +119,29 @@ public class LoginScript : MonoBehaviour
         public string email;
         public int age;
         public string gender;
+    }
+
+
+
+    public void ReloadSceneLogin()
+    {
+        PlayerPrefs.SetString("accessToken","");
+        PlayerPrefs.SetString("username","");
+        PlayerPrefs.SetString("email", "");
+        PlayerPrefs.SetString("age", "");
+        PlayerPrefs.SetString("gender", "");
+        PlayerPrefs.Save();
+        SceneManager.LoadScene("Login");
+    }
+    public void ReloadSceneRegister()
+    {
+        PlayerPrefs.SetString("accessToken", "");
+        PlayerPrefs.SetString("username", "");
+        PlayerPrefs.SetString("email", "");
+        PlayerPrefs.SetString("age", "");
+        PlayerPrefs.SetString("gender", "");
+        PlayerPrefs.Save();
+        SceneManager.LoadScene("Register");
     }
 }
 
