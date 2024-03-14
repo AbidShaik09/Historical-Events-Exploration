@@ -11,5 +11,9 @@ public class SceneManagerScript : MonoBehaviour
     {
         SceneManager.LoadScene("Interaction");
     }
+    public void loadScene(string sceneName)
+    {
+        SceneManager.LoadScene("Menu");
+    }
 
 }

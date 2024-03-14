@@ -29,16 +29,29 @@ public class ButtonScript : MonoBehaviour
     public void Chandrayan3()
     {
 
-        SceneManager.LoadScene(2, LoadSceneMode.Single);
+        SceneManager.LoadScene("Interaction", LoadSceneMode.Single);
 
 
     }
     public void IndependanceDay()
     {
 
-        SceneManager.LoadScene(1, LoadSceneMode.Single);
+        SceneManager.LoadScene("Interaction-Ind", LoadSceneMode.Single);
 
 
     }
+    public void HumanBodyTracking3D()
+    {
+
+        SceneManager.LoadScene("HumanBodyTracking3D", LoadSceneMode.Single);
+
+
+    }
+    public void LoadScene( string sceneName)
+    {
+        SceneManager.LoadScene(sceneName    , LoadSceneMode.Single);
+
+    }
+
 
 }

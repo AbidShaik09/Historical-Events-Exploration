@@ -78,9 +78,6 @@ EditorBuildSettings:
     path: Assets/Scenes/BodyTracking/HumanBodyTracking2D.unity
     guid: b2551dd1f69e7446e9093f0f38e03160
   - enabled: 0
-    path: Assets/Scenes/BodyTracking/HumanBodyTracking3D.unity
-    guid: 9fc1f5ed98d414310a8b9e659c295d7c
-  - enabled: 0
     path: Assets/Scenes/ImageTracking/BasicImageTracking/BasicImageTracking.unity
     guid: e0b018a3c3b5cfd4c8e316706ec0a18c
   - enabled: 0
@@ -140,6 +137,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Profile/Profile.unity
     guid: 8512fabc4241bc449b454b22d26890a2
+  - enabled: 1
+    path: Assets/Scenes/BodyTracking/HumanBodyTracking3D.unity
+    guid: 9fc1f5ed98d414310a8b9e659c295d7c
+  - enabled: 1
+    path: Assets/Scenes/Interaction 1/Interaction-Ind.unity
+    guid: 13d98f884033b6e4bad9fcb2d64d226b
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: c52d3bb36b4c86f47af54ab9c7a02589,
       type: 2}
