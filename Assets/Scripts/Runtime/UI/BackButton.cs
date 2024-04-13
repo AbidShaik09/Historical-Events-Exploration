@@ -17,6 +17,10 @@ namespace UnityEngine.XR.ARFoundation.Samples
         {
             if (Application.CanStreamedLevelBeLoaded("Menu"))
                 m_BackButton.SetActive(true);
+            else
+            {
+                print("no hi");
+            }
         }
 
         void Update()
@@ -29,6 +33,10 @@ namespace UnityEngine.XR.ARFoundation.Samples
         {
             if (Application.CanStreamedLevelBeLoaded("Menu"))
                 SceneManager.LoadScene("Menu", LoadSceneMode.Single);
+            else
+            {
+                print("hi");
+            }
         }
     }
 }
